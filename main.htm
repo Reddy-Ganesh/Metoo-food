@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/jpeg" href="icon.jpg">
+    <title>
+        MeToo
+    </title>
+    <style>
+        .div-container {
+            display: flex;
+
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 10px 25px 15px solid black;
+
+
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+            margin: 0;
+            height: 450px;
+
+
+
+
+
+
+
+        }
+
+        .div-container2 {
+            display: flex;
+            width: 100%;
+            border: 10;
+            border-radius: 20;
+            border-color: red;
+            max-width: 100%;
+            height: 470px;
+
+            animation: slide 20s infinite;
+
+
+        }
+
+        .div-container2 img {
+            width: 196.2%;
+            height: 470px;
+
+            flex-shrink: 0;
+        }
+
+        /*keyframe is used for animation*/
+        @keyframes slide {
+
+            0%,
+            20% {
+                transform: translateX(0);
+            }
+
+            /* For the first 20% of the animation duration, show the first image.*/
+            20%,
+            40% {
+                transform: translateX(-197%);
+            }
+
+            /*From 20% to 40%, slide to the second image*/
+            40%,
+            60% {
+                transform: translateX(-388%);
+            }
+
+            60%,
+            80% {
+                transform: translateX(-595%);
+            }
+
+            80%,
+            100% {
+                transform: translateX(-785%);
+            }
+        }
+
+        li {
+
+
+            display: inline;
+            padding: 10px;
+
+        }
+
+        a {
+            text-decoration: none;
+            border-bottom-color: black;
+            font-size: 0.5cm
+        }
+
+        .text-border {
+            position: absolute;
+            align-content: center;
+
+            /* here the right, left bottom and top are the tells in which position */
+            top: 0%;
+            text-align: left;
+
+
+
+
+
+
+
+
+
+
+        }
+
+        .home-button {
+            display: inline-block;
+            position: relative;
+
+            align-content: flex-end;
+            /* here the right, left bottom and top are the tells in which position */
+
+            text-align: right;
+
+
+            max-height: 60px;
+            padding: 0px;
+
+            overflow: hidden;
+            width: 100%;
+
+
+
+        }
+
+        .home-button a {
+            font-family: "Microsoft Sans Serif";
+            font-weight: 100;
+            color: white;
+
+
+        }
+
+
+        .home-button a:hover {
+            color: black;
+
+        }
+
+
+
+
+
+        body {
+
+            background: black;
+            color: white;
+        }
+
+
+
+
+        /*
+                to get url from you tube video
+                Thumbnail URLs:
+        Here are the available options for thumbnail URLs:
+
+        Default Quality: https://img.youtube.com/vi/VIDEO_ID/default.jpg
+        Medium Quality: https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg
+        High Quality: https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
+        Standard Definition (SD): https://img.youtube.com/vi/VIDEO_ID/sddefault.jpg
+        High Definition (HD): https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg
+        */
+        .items-container {
+            display: grid;
+            margin: 0;
+            padding: 30px;
+            grid-template-columns: auto auto auto auto;
+            row-gap: 40px;
+            align-content: center;
+            column-gap: 20px;
+            border: 2px solid silver;
+            border-radius: 20px;
+        }
+
+        .Veg {
+            position: relative;
+            border: 3px solid rgb(255, 217, 0);
+            width: 300px;
+            height: 450px;
+            top: 10px;
+            margin: 0;
+            padding: 0;
+            border-radius: 3%;
+
+        }
+
+        .Veg:hover {
+            box-shadow: 0px 2px 7px 2px rgb(170, 165, 165);
+
+        }
+
+        .video-container {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            object-fit: fill;
+            border-top-right-radius: 5%;
+            border-top-left-radius: 5%;
+        }
+
+        .image-pic {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            transition: opacity 0.3s ease;
+            object-fit: cover;
+            border-top-right-radius: 5%;
+            border-top-left-radius: 4%;
+        }
+
+        .hover-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+            border-top-right-radius: 5%;
+            border-top-left-radius: 5%;
+        }
+
+        .hover-video {
+            opacity: 0;
+        }
+
+        .video-container:hover .image-pic {
+            opacity: 0;
+        }
+
+        .video-container:hover .hover-video {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .cost {
+            position: relative;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            border: 1px solid chocolate;
+            width: 300px;
+            height: 40px;
+            left: 0;
+            align-content: center;
+        }
+
+        .cost h2 {
+            position: relative;
+            left: 65px;
+            margin: 0;
+            top: 2px;
+        }
+
+        .rating {
+            position: relative;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            width: 300px;
+            height: 40px;
+            border-top: 2px dashed orange;
+            margin-top: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px dashed orange;
+
+
+            align-content: center;
+        }
+
+        .rating img {
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .rating-star {
+            width: 60px;
+            height: 28px;
+            color: white;
+            background-color: lightgreen;
+            font-size: 16px;
+            background-color: #23D902;
+            outline: none;
+            border-radius: 30px;
+            position: relative;
+            left: 115px;
+            top: 10px;
+            padding: 0;
+            margin: 0;
+            justify-content: space-between;
+        }
+
+        .discreption {
+            width: 300px;
+            height: 50px;
+            padding: 0;
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            margin-bottom: 10px;
+
+        }
+
+        .full-content {
+            position: relative;
+            left: 50px;
+            top: 20px;
+        }
+
+        .full-content button {
+            background-color: rgb(255, 136, 1);
+            width: 180px;
+            height: 50px;
+            color: white;
+            border-radius: 20px;
+            font-family: 'monospace';
+            font-size: 20px;
+        }
+
+
+        .rating img {
+            position: relative;
+            left: 130px;
+            width: 35px;
+            height: 35px;
+            top: 3px;
+        }
+
+        .rating h3 {
+            position: relative;
+            margin: 0;
+            font-size: 20px;
+            top: 10px;
+        }
+
+        .explore-video {
+            position: relative;
+            left: 150px;
+            top: 5px;
+            display: none;
+            width: 1200px;
+            align-content: center;
+            margin: 0px;
+
+
+            padding-top: 0;
+            height: 1200px;
+            background-color: black;
+            color: #ffffff;
+        }
+
+        .explore-video table {
+            position: absolute;
+            margin: 0px;
+            left: 40px;
+            top: 0px;
+
+
+        }
+
+        .explore-video fieldset {
+            position: relative;
+            top: 270px
+        }
+
+        .explore-video button {
+            border: 0;
+            background-color: rgb(173, 165, 165);
+            font-family: 'Arial Narrow';
+            color: white;
+            box-shadow: 1px 2px 1px rgb(189, 197, 201);
+        }
+
+        .Free-content {
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(90deg, rgba(105, 252, 58, 1) 17%, rgba(71, 245, 144, 1) 57%, rgba(193, 252, 70, 1) 100%);
+            border: 2px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+
+
+        }
+
+        .Free-content h1 {
+            margin: 0PX;
+            padding-top: 1PX;
+        }
+
+        .field-to {
+            display: none;
+            border: 3px dashed;
+            border-radius: 5px;
+            color: #ffffff;
+
+
+
+        }
+
+        .field-to li {
+            display: block;
+
+        }
+
+        .contact-img {
+            position: sticky;
+
+            width: 50px;
+            height: 50px;
+            bottom: 5px;
+            border: 5px solid rgb(16, 206, 3);
+            border-radius: 40px;
+            left: 1500px;
+
+            animation: 2s flip linear infinite;
+
+
+
+
+        }
+
+        .contact-img img {
+            position: sticky;
+            border-radius: 50px;
+            overflow: unset;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            background-color: #ffffff;
+
+
+
+
+        }
+
+        @keyframes flip {
+            0% {
+                transform: rotateY(0deg);
+                top: 0px
+            }
+
+            25% {
+                transform: rotateY(90deg);
+                top: 25px
+            }
+
+            50% {
+                transform: rotateY(180deg);
+                top: 45px
+            }
+
+            75% {
+                transform: rotateY(270deg);
+                bottom: 20px;
+
+            }
+
+
+            100% {
+                transform: rotateY(360deg);
+                bottom: 0px;
+            }
+        }
+
+        .contact-img:hover {
+            animation: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="div-container">
+        <div class="div-container2">
+            <img
+                src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?cs=srgb&dl=pexels-chanwalrus-958545.jpg&fm=jpg">
+            <img src="https://cdn.pixabay.com/photo/2022/06/27/05/38/spices-7286739_640.jpg">
+            <img src="https://img.freepik.com/free-photo/close-up-appetizing-ramadan-meal_23-2151182540.jpg">
+            <img
+                src="https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/10/MG_3869.jpg?fit=1500%2C1011&ssl=1">
+            <img
+                src="https://www.tastingtable.com/img/gallery/17-celebrity-chefs-and-their-favorite-fast-food-restaurants/l-intro-1674674335.jpg">
+        </div>
+        <div class="text-border">
+            <h1 style="color:whitesmoke;">
+                <i class="fa fa-coffee"></i> MeToo
+            </h1>
+        </div>
+        <div class="home-button">
+
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Call Request</a>
+                    </li>
+                </ul>
+
+
+            </nav>
+        </div>
+    </div>
+    <!-------------------------Free content logo------------------------------->
+    <div class="Free-content">
+        <h1 align="center">
+            Free content
+        </h1>
+    </div>
+    <!------FROM here the different contant is stat grid contant-->
+    <div id="div1" class="items-container">
+        <div class="Veg">
+            <div class="video-container">
+                <img class="image-pic"
+                    src="https://img.freepik.com/free-photo/freshly-italian-pizza-with-mozzarella-cheese-slice-generative-ai_188544-12347.jpg">
+                <iframe class="hover-video" id="iframe1"
+                    src="https://www.youtube.com/embed/kRCH8kD1GD0?autoplay=1&mute=1&loop=1&playlist=kRCH8kD1GD0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <fieldset id="fieldset1" class="field-to">
+                    <legend style="font-size: 20px;">
+                        Veg-pizza
+                    </legend>
+                    Certainly! Here's the preparation steps for Veg - pizza presented in a bulleted list:
+                    Preheat oven to 425°F (220°C).
+                    <ul>
+                        <li>Preheat oven to 425°F (220°C).</li>
+                        <li>Roll out pizza dough onto a baking sheet.</li>
+                        <li>Spread tomato sauce over dough.</li>
+                        <li>Sprinkle mozzarella cheese.</li>
+                        <li>Add chopped vegetables (bell peppers, onions, mushrooms, etc.).</li>
+                        <li>Drizzle olive oil, season with salt, pepper, and Italian seasoning.</li>
+                        <li>Bake for 12-15 mins until crust is golden.</li>
+                        <li>Slice and serve your delicious vegetarian pizza!</li>
+                    </ul>
+                    Enjoy your homemade pizza!
+                </fieldset>
+            </div>
+            <br>
+            <div class="cost">
+                <h2>Veg - pizza</h2>
+            </div>
+            <div class="discreption">Pizza, Pasta, Italian, Desserts, Beverages Attapur, Hyderabad</div>
+            <div class="rating">
+                <h3>Rating</h3>
+                <button class="rating-star">&star; 4.2</button>
+                <img src="rate.gif">
+            </div>
+            <div class="full-content">
+                <button id="button1" onclick="swapIframes('iframe1','fieldset1')">Explore content</button>
+            </div>
+        </div>
+        <!--===================================================222==================================================-->
+        <div class="Veg">
+            <div class="video-container">
+                <img class="image-pic"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjymgXWmebNFEmFaWBOG5DEYDmYad03sS6zGulGNtJzA&s">
+                <iframe class="hover-video" id="iframe2"
+                    src="https://www.youtube.com/embed/uRHKvCkh3G8?autoplay=1&mute=1&loop=1&playlist=uRHKvCkh3G8"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <fieldset id="fieldset2" class="field-to">
+                    <legend style="font-size: 20px;">
+                        Chicken-pizza
+                    </legend>
+                    Certainly! Here's the preparation steps for chicken pizza presented in a bulleted list:
+                    Preheat oven to 425°F (220°C).
+                    <ul>
+                        <li>Roll out pizza dough onto a baking sheet.</li>
+                        <li>Spread tomato sauce over dough.</li>
+                        <li>Sprinkle mozzarella cheese.</li>
+                        <li>Add cooked chicken evenly</li>
+                        <li>Add vegetables of choice.</li>
+                        <li>Drizzle olive oil, season with salt, pepper, and Italian seasoning.</li>
+                        <li>Bake for 12-15 mins until crust is golden</li>
+                        <li>Slice and serve your delicious chicken pizza!</li>
+                    </ul>
+                    Enjoy your homemade pizza!
+                </fieldset>
+            </div>
+            <br>
+            <div class="cost">
+                <h2>Chicken - pizza</h2>
+            </div>
+            <div class="discreption">Chicken, sweet Italian sausage, cremini mushrooms, fontina cheese, and sliced red
+                bell pepper.</div>
+            <div class="rating">
+                <h3>Rating</h3>
+                <button class="rating-star">&star; 4.0</button>
+                <img src="rate.gif">
+            </div>
+            <div class="full-content">
+                <button id="button2" onclick="swapIframes('iframe2','fieldset2')">Explore content</button>
+            </div>
+        </div>
+        <!--=====================================================================================================-->
+        <div class="Veg">
+            <div class="video-container">
+                <img class="image-pic"
+                    src="https://vismaifood.com/storage/app/uploads/public/914/f47/fa9/thumb__700_0_0_0_auto.jpg">
+                <iframe class="hover-video" id="iframe3"
+                    src="https://www.youtube.com/embed/95BCU1n268w?autoplay=1&mute=1&loop=1&playlist=95BCU1n268w"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <fieldset id="fieldset3" class="field-to">
+                    <legend style="font-size: 20px;">
+                        Chicken-Biryani
+                    </legend>
+                    Certainly! Here's the preparation steps for Chicken-Biryani presented in a bulleted list:
+                    Preheat oven to 425°F (220°C).
+                    <ul>
+                        <li>Marinate chicken with yogurt, spices, and let it sit for 30 minutes.</li>
+                        <li>Soak basmati rice for 30 minutes, then drain.</li>
+                        <li>Heat oil, add whole spices and sauté.</li>
+                        <li>Add onions and cook until golden brown.</li>
+                        <li>Add marinated chicken and cook until done.</li>
+                        <li>Layer half-cooked rice over the chicken.</li>
+                        <li>Sprinkle saffron milk, ghee, mint, and coriander leaves.</li>
+                        <li>Cover and cook on low heat for 20-25 minutes.</li>
+                        <li>Fluff the biryani gently and serve hot.</li>
+                    </ul>
+                    Enjoy your homemade Chicken Biriyani!
+                </fieldset>
+            </div>
+            <br>
+            <div class="cost">
+                <h2>Chicken-Biryani</h2>
+            </div>
+            <div class="discreption">Biryani is prepared from basmati rice mixed with several spices and cooked in a
+                special way.</div>
+            <div class="rating">
+                <h3>Rating</h3>
+                <button class="rating-star">&star; 4.2</button>
+                <img src="rate.gif">
+            </div>
+            <div class="full-content">
+                <button id="button3" onclick="swapIframes('iframe3','fieldset3')">Explore content</button>
+            </div>
+        </div>
+        <!--=========================================================================================================-->
+        <div class="Veg">
+            <div class="video-container">
+                <img class="image-pic"
+                    src="https://t4.ftcdn.net/jpg/06/12/87/71/360_F_612877124_1ZmDz0V37Yc48er7IdGZbv3vi20l1L0Y.jpg">
+                <iframe class="hover-video" id="iframe4"
+                    src="https://www.youtube.com/embed/E49fvjd6vtg?autoplay=1&mute=1&loop=1&playlist=E49fvjd6vtg"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <fieldset id="fieldset4" class="field-to">
+                    <legend style="font-size: 20px;">
+                        Mtton Biryani
+                    </legend>
+                    Certainly! Here's the preparation steps for Mtton Biryani presented in a bulleted list:
+                    Preheat oven to 425°F (220°C).
+                    <ul>
+                        <li>Marinate mutton with yogurt, spices, and let sit for 1-2 hours.</li>
+                        <li>Soak basmati rice for 30 minutes, then drain.</li>
+                        <li>Heat oil, add whole spices and sauté.</li>
+                        <li>Add onions and cook until golden brown.</li>
+                        <li>Add marinated mutton and cook until browned.</li>
+                        <li>Add tomatoes and cook until softened.</li>
+                        <li>Cook mutton until tender (use pressure cooker if needed).</li>
+                        <li>Boil rice until half-cooked, then drain.</li>
+                        <li>Layer rice over mutton.</li>
+                        <li>Sprinkle saffron milk, ghee, mint, and coriander.</li>
+                        <li>Cover and cook on low heat for 20-25 minutes.</li>
+                        <li>Fluff biryani gently and serve hot.</li>
+                    </ul>
+                    Enjoy your homemade Mtton Biryani!
+                </fieldset>
+            </div>
+            <br>
+            <div class="cost">
+                <h2>Mtton Biryani</h2>
+            </div>
+            <div class="discreption">A hearty mutton biryani that will impress your guests instantly.</div>
+            <div class="rating">
+                <h3>Rating</h3>
+                <button class="rating-star">&star; 4.2</button>
+                <img src="rate.gif">
+            </div>
+            <div class="full-content">
+                <button id="button4" onclick="swapIframes('iframe4','fieldset4')">Explore content</button>
+            </div>
+        </div>
+        <!--===================================================================================================-->
+        <div class="Veg">
+            <div class="video-container">
+                <img class="image-pic" src="https://static.toiimg.com/photo/90075594.cms">
+                <iframe class="hover-video" id="iframe5"
+                    src="https://www.youtube.com/embed/0ksbDm7wbJg?autoplay=1&mute=1&loop=1&playlist=0ksbDm7wbJg"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <fieldset id="fieldset5" class="field-to">
+                    <legend style="font-size: 20px;">
+                        Chicken 65
+                    </legend>
+                    Certainly! Here's the preparation steps for Chicken 65 presented in a bulleted list:
+                    Preheat oven to 425°F (220°C).
+                    <ul>
+                        <li>Marinate chicken.</li>
+                        <li>Coat with flour.</li>
+                        <li>Fry until crispy.</li>
+                        <li>Sauté with spices.</li>
+                        <li>Garnish and serve.</li>
+                    </ul>
+                    Enjoy your homemade Chicken 65!
+                </fieldset>
+            </div>
+            <br>
+            <div class="cost">
+                <h2>Chicken 65</h2>
+            </div>
+            <div class="discreption">Chicken 65 is a popular chicken dish across India.</div>
+            <div class="rating">
+                <h3>Rating</h3>
+                <button class="rating-star">&star; 4.2</button>
+                <img src="rate.gif">
+            </div>
+            <div class="full-content">
+                <button id="button5" onclick="swapIframes('iframe5','fieldset5')">Explore content</button>
+            </div>
+        </div>
+        <!--=======================================================================================================-->
+        <div class="Veg">
+            <div class="video-container">
+                <img class="image-pic"
+                    src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/06/chicken-tikka-kebab-recipe-768x1152.jpg.webp">
+                <iframe class="hover-video" id="iframe6"
+                    src="https://www.youtube.com/embed/6No7g2GptXY?autoplay=1&mute=1&loop=1&playlist=6No7g2GptXY"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <fieldset id="fieldset6" class="field-to">
+                    <legend style="font-size: 20px;">
+                        Chicken tikkas
+                    </legend>
+                    Certainly! Here's the preparation steps for Chicken tikkas presented in a bulleted list:
+                    Preheat oven to 425°F (220°C).
+                    <ul>
+                        <li>Cut chicken into bite-sized pieces.</li>
+                        <li>Marinate with yogurt, spices, and lemon juice.</li>
+                        <li>Thread onto skewers and grill or bake until cooked.</li>
+                        <li>Serve hot with mint chutney and lemon wedges.</li>
+                    </ul>
+                    Enjoy your homemade Chicken tikkas!
+                </fieldset>
+            </div>
+            <br>
+            <div class="cost">
+                <h2>Chicken tikkas</h2>
+            </div>
+            <div class="discreption">The juicy chicken tikkas are complimented so well by the pronounced flavour of
+                black pepper.</div>
+            <div class="rating">
+                <h3>Rating</h3>
+                <button class="rating-star">&star;4.2</button>
+                <img src="rate.gif">
+            </div>
+            <div class="full-content">
+                <button id="button6" onclick="swapIframes('iframe6','fieldset6')">Explore content</button>
+            </div>
+        </div>
+        <!--========================================================================================================-->
+        <div class="Veg">
+            <div class="video-container">
+                <img class="image-pic"
+                    src="https://www.sharmispassions.com/wp-content/uploads/2022/02/CarrotHalwa55.jpg">
+                <iframe class="hover-video" id="iframe7"
+                    src="https://www.youtube.com/embed/3hx9cqYKMmk?autoplay=1&mute=1&loop=1&playlist=3hx9cqYKMmk"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <fieldset id="fieldset7" class="field-to">
+                    <legend style="font-size: 20px;">
+                        Carrot Halwa
+                    </legend>
+                    Certainly! Here's the preparation steps for Carrot Halwa presented in a bulleted list:
+                    Preheat oven to 425°F (220°C).
+                    <ul>
+                        <li>Grate carrots.</li>
+                        <li>Sauté carrots in ghee until soft.</li>
+                        <li>Add milk and cook until reduced.</li>
+                        <li>Add sugar, cardamom, and nuts.</li>
+                        <li>Cook until thickened.</li>
+                        <li>Garnish with more nuts and serve hot or cold.</li>
+                    </ul>
+                    Enjoy your homemade Carrot Halwa!
+                </fieldset>
+            </div>
+            <br>
+            <div class="cost">
+                <h2>Carrot Halwa</h2>
+            </div>
+            <div class="discreption">Carrot Halwa is a popular Indian dessert made with carrots, milk, sugar and ghee.
+            </div>
+            <div class="rating">
+                <h3>Rating</h3>
+                <button class="rating-star">&star; 4.2</button>
+                <img src="rate.gif">
+            </div>
+            <div class="full-content">
+                <button id="button7" onclick="swapIframes('iframe7','fieldset7')">Explore content</button>
+            </div>
+        </div>
+        <!-- ====================================================================================================-->
+        <div class="Veg">
+            <div class="video-container">
+                <img class="image-pic"
+                    src="https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/1x1/1x1-badam-milkshake.jpg">
+                <iframe class="hover-video" id="iframe8"
+                    src="https://www.youtube.com/embed/upbxk0Uwuus?autoplay=1&mute=1&loop=1&playlist=upbxk0Uwuus"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <fieldset id="fieldset8" class="field-to">
+                    <legend style="font-size: 20px;">
+                        Badam milk
+                    </legend>
+
+                    <ul>
+                        <li>Soak almonds overnight or in hot water for 1 hour.</li>
+                        <li>Peel almonds and blend with milk.</li>
+                        <li>Strain mixture and boil with sugar and cardamom.</li>
+                        <li>Add saffron for flavor and color.</li>
+                        <li>Serve hot or cold.</li>
+                    </ul>
+                    Enjoy your homemade Badam milk!
+                </fieldset>
+            </div>
+            <br>
+            <div class="cost">
+                <h2>Badam milk</h2>
+            </div>
+            <div class="discreption">Badam milk is a popular Indian drink made with almonds, milk, sugar, and cardamom.
+            </div>
+            <div class="rating">
+                <h3>Rating</h3>
+                <button class="rating-star">&star; 4.2</button>
+                <img src="rate.gif">
+            </div>
+            <div class="full-content">
+                <button id="button8" onclick="swapIframes('iframe8','fieldset8')">Explore content</button>
+            </div>
+        </div>
+        <!--==========================================================================================================-->
+    </div>
+    <!------------------------------------------------------ div grid close------------------------------------------------->
+    <div class="explore-video" id="div2">
+        <table cellspacing="20px" align="center">
+            <tr>
+                <td align="right">
+                    <button class="explox-video-close" onclick="closeContent()">X</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <iframe id="iframe2-video" src="" width="1080pxpx" height="550px"></iframe>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <center>
+
+
+        <section id="contact">
+            <center>
+                <div
+                    style="width: 50%; max-height: 260px; display:flex;position: relative;;background-color:#343634; box-shadow: 5px 5px 5px rgb(124, 126, 127); margin: 20px; border-radius: 10px; padding: 15px;">
+
+                    <table style="padding: 0;">
+                        <tr>
+                            <td>
+                                <h1
+                                    style="margin: 5px 0; ;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+                                    Contact Us
+                                </h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h2 style="margin: 5px 0;">Let's bring joy and delight to the process of preparation
+                                    food
+                                    together.
+                                </h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="margin: 5px 0;">Customer Support: ganeshreddy6498@gmail.com</h3>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="margin: 5px 0;">Enterprise Sales Inquiries: esteam@bikewale.com</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3 style="margin: 5px 0;">Address: 4th Floor, IT Park,
+                                    Gudivada, Andhra Pradesh</h3>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </center>
+
+
+        </section>
+
+    </center>
+    <div class="contact-img">
+        <a href="https://chat.whatsapp.com/Kvz2BvtdumHI0bjt7p1NW4">
+        <img src="https://pngimg.com/d/whatsapp_PNG21.png"></a>
+    </div>
+    <script>
+        var currentFieldset = null;
+        function swapIframes(iframeId, field) {
+
+            // Get the src attribute of the iframe1
+            var iframe1Src = document.getElementById(iframeId).src;
+
+            // Set the src attribute of the iframe2 to the iframe1Src
+            document.getElementById("iframe2-video").src = iframe1Src + "&autoplay=1";
+
+            // Hide the div1
+            document.getElementById("div1").style.display = "none";
+
+            // Show the div2
+            document.getElementById("div2").style.display = "block";
+            var fieldset = document.getElementById(field);
+            document.getElementById("div2").appendChild(fieldset);
+            fieldset.style.display = "block";
+            currentFieldset = field
+        }
+
+        function closeContent() {
+            // Show the items-container div
+            document.getElementById("div1").style.display = "grid";
+
+            // Hide the full-content div
+            document.getElementById("div2").style.display = "none";
+
+            // Clear the iframe2-video src
+            document.getElementById("iframe2-video").src = "";
+
+            document.getElementById(currentFieldset).style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

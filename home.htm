@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/jpeg" href="icon.jpg">
+    <title>
+
+        MeToo
+
+    </title>
+    <style>
+        body {
+            background-image: url("https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .one {
+            display: inline;
+            position: absolute;
+            color: white;
+            margin: 0px;
+            margin-top: 10px;
+            padding: 0;
+            font-size: 30px;
+
+        }
+
+        .two {
+            display: inline;
+            position: absolute;
+
+
+            width: 45%;
+            font-size: 18px;
+            left: 450px;
+
+
+
+        }
+
+        .two a {
+            font-family: "Microsoft Sans Serif";
+            font-weight: 100;
+            color: white;
+            text-decoration: none;
+
+            margin: 0%;
+
+
+
+
+        }
+
+        .two li {
+
+            margin: 0px;
+            display: inline;
+            padding-inline: 30px;
+
+        }
+
+        .three {
+            position: absolute;
+            left: 150px;
+            top: 150px;
+
+            width: 25%;
+            height: 65%;
+            box-shadow: 10px 10px 10px 10px rgb(124, 126, 127);
+            border-radius: 5px;
+            backdrop-filter: blur(30px);
+            overflow: hidden;
+
+        }
+
+        .three:hover {
+            box-shadow: 5px 5px 5px 5px whitesmoke;
+
+        }
+
+        .button2 {
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            border-radius: 30px;
+            box-shadow: 0 0 20px 9px #ff61241f;
+
+        }
+
+        .button3 {
+            padding: 10px 30px;
+            cursor: pointer;
+            border: 0;
+            background: transparent;
+            outline: none;
+            position: relative;
+
+        }
+
+        #button-colour {
+            top: 0;
+            left: 0;
+            width: 110px;
+            position: absolute;
+            height: 100%;
+            background-color: lightgreen;
+            border-radius: 30px;
+            transition: 0.5s
+        }
+
+        .form1 {
+            position: absolute;
+            width: 280px;
+            transition: 0.5s;
+            margin-left: 10px;
+        }
+
+        .form1 {
+            left: 50px;
+        }
+
+
+
+        .form2 {
+            position: absolute;
+            width: 280px;
+            transition: 0.5s;
+            margin-left: 10px;
+            transition: 0.5s;
+
+
+
+        }
+
+        .form2 {
+            left: 450px;
+
+        }
+
+        .form1 input[type=text],
+        [type=password] {
+            width: 100%;
+            padding: 10px 0;
+            margin: 10px 0;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            background-color: transparent;
+
+
+            border-bottom: 1px solid orangered;
+        }
+
+        .form2 input[type=text],
+        [type=password],
+        [type="email"] {
+            width: 100%;
+            padding: 10px 0;
+            margin: 10px 0;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            background-color: transparent;
+
+            border-bottom: 1px solid orangered;
+        }
+
+        .form1 button {
+
+            width: 50%;
+            height: 40px;
+            margin-top: 10px;
+            margin-left: 25%;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgb(124, 126, 127);
+            border: 0;
+            background-color: orangered;
+            color: white;
+        }
+
+        .form1 button:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .form2 button {
+
+            width: 50%;
+            height: 40px;
+            margin-top: 10px;
+            margin-left: 25%;
+            border-radius: 20px;
+            box-shadow: 2px 2px lightseagreen;
+            border: 0;
+            background-color: orangered;
+            color: white;
+        }
+
+        .form2 button:hover {
+            color: black;
+            background-color: white;
+
+        }
+
+        .form1 ::placeholder {
+            color: white;
+
+        }
+
+        .form2 ::placeholder {
+            color: white;
+
+
+        }
+
+        .abc {
+            position: relative;
+
+            top: 450px;
+            left: 800px;
+            width: 700px;
+            margin: 0;
+
+
+        }
+
+        .abc h1::first-letter {
+            font-size: 140px;
+            color: white;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .abc h1 {
+            font-style: italic;
+            font-size: 45px;
+            margin: 0;
+            padding: 0;
+            color: black;
+
+            text-shadow: 0px 2px 1px rgb(255, 255, 255);
+
+
+
+
+
+        }
+
+        .abc h2 {
+            font-size: 30px;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+            font-family: 'cursive';
+            font-style: italic;
+            text-shadow: 0px 2px 1px rgb(7, 7, 7);
+        }
+    </style>
+    <script>
+        //here when we write inside the head tag the variable must be declear in inside the funtion
+        // or else we can declear out side the function
+
+        function reg1() {
+            var x = document.getElementById("login-form");
+            var y = document.getElementById("reg-form");
+            var z = document.getElementById("button-colour");
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login() {
+            var x = document.getElementById("login-form");
+            var y = document.getElementById("reg-form");
+            var z = document.getElementById("button-colour");
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+        function submit1() {
+
+            var x = document.getElementById("login-form");
+            var y = document.getElementById("reg-form");
+            var z = document.getElementById("button-colour");
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class="one">
+        MeToo
+
+    </div>
+    <div class="two">
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="" onclick="login">Login</a>
+                </li>
+                <li>
+                    <a href="tel:+917702837610">Contact</a>
+                </li>
+                <li>
+                    <a href="https://chat.whatsapp.com/Kvz2BvtdumHI0bjt7p1NW4">Call Request</a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+    <div class="three">
+        <div class="button2">
+            <div id="button-colour">
+
+            </div>
+            <button onclick="login()" class="button3">Login</button>
+            <button onclick="reg1()" class="button3">Register</button>
+
+
+        </div>
+        <form class="form1" id="login-form" action="main.htm" target="_self">
+            <input type="text" placeholder="User name">
+            <input type="password" placeholder="Password">
+            <br><br>
+
+            <a href="#" id="forget" style="font-size:15px;">Forget Password</a>
+            <br><br>
+
+
+            <button type="submit"> submit</button>
+
+
+        </form>
+        <form class="form2" id="reg-form">
+            <input type="text" placeholder="User name">
+            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Retype Password">
+            <input type="email" placeholder="enter mail">
+
+            <br><br>
+
+
+
+            <button onclick="submit1()" type="submit"> submit</button>
+
+
+        </form>
+
+    </div>
+    <div class="abc">
+        <h1>Make your own food</h1>
+        <h2>Taste the moments, savor the memories with your buddy</h2>
+
+
+
+    </div>
+
+</body>
+
+</html>
